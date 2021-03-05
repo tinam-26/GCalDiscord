@@ -60,23 +60,15 @@ def main():
         if(events['calendars'].get('email@gmail.com').get('busy') != []):
             client_id = "" #busy 
             
-            RPC = Presence(client_id)  # Initialize the Presence client
-
-            RPC.connect() # Start the handshake loop
-
-            RPC.update(state="Rich Presence using pypresence!") # Updates our presence
 
         else:
             client_id = ""  # online   
-            RPC = Presence(client_id)  # Initialize the Presence client
-
-            RPC.connect() # Start the handshake loop
-
-            RPC.update(state="Rich Presence using pypresence!") # Updates our presence
-
             
-       
+        RPC = Presence(client_id)  # Initialize the Presence client
 
+        RPC.connect() # Start the handshake loop
+
+        RPC.update(state="Rich Presence using pypresence!") # Updates our presence
 
         time.sleep(3000);
 
