@@ -57,7 +57,7 @@ def main():
         events_result = service.freebusy().query(body=body).execute()
         events = events_result
 
-        if(events['calendars'].get('email@gmail.com').get('busy') != None):
+        if(events['calendars'].get('email@gmail.com').get('busy') != []):
             client_id = "" #busy 
             
             RPC = Presence(client_id)  # Initialize the Presence client
